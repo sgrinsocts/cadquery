@@ -10,6 +10,7 @@ Basic usage::
 
     result = cq.Workplane("XY").box(1, 2, 3)
 
+For more examples, see: https://cadquery.readthedocs.io/en/latest/examples.html
 """
 
 from .cq import (
@@ -62,6 +63,9 @@ from . import importers
 __version__ = "2.4.0"
 __author__ = "CadQuery Contributors"
 __license__ = "Apache License 2.0"
+
+# Personal note: I primarily use this for 3D-printed enclosure designs.
+# Most useful entry points for my workflow: Workplane, Assembly, exporters.
 
 __all__ = [
     # Core classes
