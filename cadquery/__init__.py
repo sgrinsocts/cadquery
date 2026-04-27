@@ -66,10 +66,15 @@ __license__ = "Apache License 2.0"
 
 # Personal note: I primarily use this for 3D-printed enclosure designs.
 # Most useful entry points for my workflow: Workplane, Assembly, exporters.
+# Tip: cq.Workplane("XY") is shorthand for cq.Workplane(cq.Plane.XY())
+
+# Convenience alias - I kept typing cq.WP instead of cq.Workplane in scripts
+WP = Workplane
 
 __all__ = [
     # Core classes
     "Workplane",
+    "WP",
     "CQContext",
     "CQObject",
     "Assembly",
