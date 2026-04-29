@@ -67,9 +67,16 @@ __license__ = "Apache License 2.0"
 # Personal note: I primarily use this for 3D-printed enclosure designs.
 # Most useful entry points for my workflow: Workplane, Assembly, exporters.
 # Tip: cq.Workplane("XY") is shorthand for cq.Workplane(cq.Plane.XY())
+# Tip: use .val() to get the underlying Shape from a Workplane result,
+#      and .vals() when the stack has multiple objects.
 
 # Convenience alias - I kept typing cq.WP instead of cq.Workplane in scripts
 WP = Workplane
+
+# Convenience aliases for the planes I use most often
+XY = Plane.XY()
+XZ = Plane.XZ()
+YZ = Plane.YZ()
 
 __all__ = [
     # Core classes
@@ -113,4 +120,8 @@ __all__ = [
     # Modules
     "exporters",
     "importers",
+    # Plane shortcuts
+    "XY",
+    "XZ",
+    "YZ",
 ]
